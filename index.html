@@ -1,44 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+    
+    <div class="calculadora">
+        <section class="entrada">
+            <div class="valor">
+                <label for="conta">Conta</label>
+                <input type="number" name="conta" placeholder="0">
+            </div>
 
-  Bill
+            <div>
+                <label for="">Selecione o %</label>
+                <ul class="opcoes">
+                    <li class="percentual">5%</li>
+                    <li class="percentual">10%</li>
+                    <li class="percentual">15%</li>
+                    <li class="percentual">25%</li>
+                    <li class="percentual">50%</li>
+                    <li class="percentual"><input id="personalizado" type="number" placeholder="outro"></li>
+                </ul>
+            </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+            <div class="valor">
+                <label for="">Numero de pessoas</label>
+                <input type="number">
+            </div>
+        </section>
 
-  Number of People
+        <section class="saida">
+            <div class="cartao">
+                <div class="resultGorjeta">
+                    <div class="legenda">Valor da gorjeta<br>/ pessoa</div>
+                    <div class="resultado">
+                        R$ 0,00
+                    </div>
+                </div>
 
-  Tip Amount
-  / person
+                <div class="resultPessoa">
+                    <div class="legenda">Total<br>/ pessoa</div>
+                    <div class="resultado">
+                        R$ 0,00
+                    </div>
+                </div>
 
-  Total
-  / person
+                <div class="botao">
+                    <button class="limpar" id="">Limpar</button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
