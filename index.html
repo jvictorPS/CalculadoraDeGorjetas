@@ -16,27 +16,28 @@
 <body>
     
     <div class="calculadora">
+
         <section class="entrada">
             <div class="valor">
                 <label for="conta">Conta</label>
-                <input type="number" name="conta" placeholder="0">
+                <input id="custo" class="valores" type="number" name="conta" placeholder="0">
             </div>
 
-            <div>
-                <label for="">Selecione o %</label>
+            <div class="parametro">
+                <label for="" class="valor">Selecione o %</label>
                 <ul class="opcoes">
-                    <li class="percentual">5%</li>
-                    <li class="percentual">10%</li>
-                    <li class="percentual">15%</li>
-                    <li class="percentual">25%</li>
-                    <li class="percentual">50%</li>
-                    <li class="percentual"><input id="personalizado" type="number" placeholder="outro"></li>
+                    <div class="percentual">5%</div>
+                    <div class="percentual">10%</div>
+                    <div class="percentual">15%</div>
+                    <div class="percentual">25%</div>
+                    <div class="percentual">50%</div>
+                    <div><input id="personalizado" type="number" placeholder="outro"></div>
                 </ul>
             </div>
 
             <div class="valor">
                 <label for="">Numero de pessoas</label>
-                <input type="number">
+                <input id="pessoas" class="valores" type="number" placeholder="0">
             </div>
         </section>
 
@@ -61,7 +62,9 @@
                 </div>
             </div>
         </section>
+
     </div>
+<script src="main.js"></script>
 
 </body>
 </html>

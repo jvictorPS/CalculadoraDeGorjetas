@@ -1,5 +1,14 @@
+html, body {
+    height: 100%;
+    background-color: var(--fundo-inputs);
+}
+
 body{
     font-family: 'Space Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 :root {
@@ -14,21 +23,85 @@ body{
 }
 
 .calculadora {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50%;
+    width: 60%;
+    align-items: center;
+    background-color: var(--branco);
+    padding: 50px;
+    border-radius: 30px;
 }
 
 /* estilização lado A */
 
 .opcoes {
-    background-color: var(--fundo-principal);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
+    height: 50%;
+    margin-top: 3%;
+}
+
+.percentual {
+    background-color: var(--fundo-principal);
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.entrada {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    margin-right: 8%;
+}
+
+.valor {
+    color: var(--letras);
+    font-weight: 700;
+}
+
+input {
+    background-color: var(--fundo-inputs);
+    border-color: var(--fundo-inputs);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--letras);
 
 }
 
 
+
+input::placeholder {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--letras);
+}
+
+.parametro {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.valores {
+    margin-top: 3%;
+    margin-bottom: 1%;
+}
+
 /* estilização lado B */
-.saida {
+
+.cartao {
+    border-radius: 20px;
     background-color: var(--fundo-principal);
+    height: 300px;
 }
