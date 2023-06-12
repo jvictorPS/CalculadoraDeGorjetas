@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    background-color: var(--fundo-inputs);
+    background-color: var(--fundo-geral);
 }
 
 body{
@@ -8,100 +8,206 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 :root {
 --fundo-principal: hsl(183, 100%, 15%);
 --letras: hsl(186, 14%, 43%);
 --botao-desligado: hsl(184, 14%, 56%);
---fundo-inputs: hsl(185, 41%, 84%);
+--fundo-inputs: #d8ecee7e;
 --cinza: hsl(189, 41%, 97%);
 --branco: hsl(0, 0%, 100%);
---click: hsl(172, 67%, 45%);
-
+--fundo-geral: hsla(172, 67%, 45%, 0.200);
+--click: hsla(172, 67%, 45%);
 }
 
 .calculadora {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 50%;
-    width: 60%;
+    height: 60%;
+    width: 50%;
     align-items: center;
     background-color: var(--branco);
-    padding: 50px;
+    padding: 0 2%;
     border-radius: 30px;
 }
 
-/* estilização lado A */
+.calculadora-informacoes {
+    padding: 5%;
+}
 
-.opcoes {
+.calculadora-informacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+}
+
+.container-valor-conta, .container-quantidade-pessoas, .container-percentual-gorjeta {
+    display: flex;
+    flex-direction: column;
+    height: 33%;
+    justify-content: center;
+}
+
+.container-opcoes-percentual {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
-    height: 50%;
-    margin-top: 3%;
+    height: 100%;
 }
 
-.percentual {
-    background-color: var(--fundo-principal);
-    height: 40px;
-    border-radius: 10px;
-    text-align: center;
-    color: var(--branco);
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.entrada {
-    display: grid;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
-    margin-right: 8%;
-}
-
-.valor {
-    color: var(--letras);
-    font-weight: 700;
-}
-
-input {
-    background-color: var(--fundo-inputs);
-    border-color: var(--fundo-inputs);
-    border: none;
-    border-radius: 5px;
+.botao-gorjeta {
     width: 100%;
-    height: 30px;
-    font-family: 'Space Mono', monospace;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--letras);
-
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-input::placeholder {
-    font-family: 'Space Mono', monospace;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--letras);
-}
-
-.parametro {
-    margin-top: 8%;
-    margin-bottom: 8%;
-}
-
-.valores {
-    margin-top: 3%;
-    margin-bottom: 1%;
-}
-
-/* estilização lado B */
-
-.cartao {
-    border-radius: 20px;
+.botao-gorjeta-fixa {
     background-color: var(--fundo-principal);
-    height: 300px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+}
+
+.botao-gorjeta-fixa:focus {
+    background-color: var(--click);
+    color: var(--fundo-principal);
+}
+
+.botao-gorjeta-fixa:hover, .gorjeta-personalizada:hover, .valor-dinheiro-pessoa:hover {
+    cursor: pointer;
+}
+
+.gorjeta-personalizada {
+    border-radius: 5px;
+    border: none;
+    background-color: var(--fundo-inputs);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--fundo-principal);
+    text-align: right;
+}
+
+.gorjeta-personalizada::placeholder {
+    text-align: center;
+}
+
+.valor-dinheiro-pessoa {
+    border: none;
+    background-color: var(--fundo-inputs);
+    height: 30%;
+    border-radius: 5px;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--fundo-principal);
+    text-align: right;
+    padding-right: 5%;
+}
+
+.input-pessoas {
+    background-image: url("../images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 4%;
+}
+
+.input-valor-conta {
+    background-image: url("../images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 4%;
+}
+
+.valor-dinheiro-pessoa:focus, .gorjeta-personalizada:focus {
+    outline: 2px solid var(--click);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.titulo-informacoes {
+    color: var(--letras);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+
+.calculadora-resultado {
+    background-color: var(--fundo-principal);
+    margin: 5%;
+    height: 85%;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.container-gorjeta-pessoa, .container-conta-pessoa {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: center;
+    align-items: end;
+}
+
+.container-reset {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.botao-reset {
+    width: 80%;
+    height: 25%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10%;
+    font-family: 'Space Mono', monospace;
+    font-size: 100%;
+    font-weight: 700;
+    background-color: var(--fundo-geral);
+    color: var(--fundo-principal);
+}
+
+.calculo-resultado {
+    color: var(--click);
+    text-align: end;
+    margin-right: 15%;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.container-legenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resultado-legenda {
+    font-size: 20px;
+    margin-left: 15%;
+}
+
+.resultado-legenda-secundario {
+    font-size: 15px;
+    margin-left: 15%;
+    margin-top: 5%;
+    color: var(--letras);
+    font-weight: 700;
+}
+
+
+.resultado-legenda {
+    color: white;
 }

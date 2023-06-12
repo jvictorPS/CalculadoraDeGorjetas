@@ -17,53 +17,59 @@
     
     <div class="calculadora">
 
-        <section class="entrada">
-            <div class="valor">
-                <label for="conta">Conta</label>
-                <input id="custo" class="valores" type="number" name="conta" placeholder="0">
+        <section class="calculadora-informacoes">
+
+            <div class="container-valor-conta">
+                <label for="conta" class="titulo-informacoes">Conta</label>
+                <input id="valor-conta" class="valor-dinheiro-pessoa input-valor-conta" type="number" name="conta" placeholder="0">
             </div>
 
-            <div class="parametro">
-                <label for="" class="valor">Selecione o %</label>
-                <ul class="opcoes">
-                    <div class="percentual">5%</div>
-                    <div class="percentual">10%</div>
-                    <div class="percentual">15%</div>
-                    <div class="percentual">25%</div>
-                    <div class="percentual">50%</div>
-                    <div><input id="personalizado" type="number" placeholder="outro"></div>
-                </ul>
+            <div class="container-percentual-gorjeta">
+                <label class="titulo-informacoes">Selecione o %</label>
+                <div class="container-opcoes-percentual">
+                    <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.05">5%</button>
+                    <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.10">10%</button>
+                    <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.15">15%</button>
+                    <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.25">25%</button>
+                    <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.50">50%</button>
+                    <input type="number" class="botao-gorjeta gorjeta-personalizada" placeholder="outro">
+                </div>
             </div>
 
-            <div class="valor">
-                <label for="">Numero de pessoas</label>
-                <input id="pessoas" class="valores" type="number" placeholder="0">
+            <div class="container-quantidade-pessoas">
+                <label for="" class="titulo-informacoes">Numero de pessoas</label>
+                <input id="quantidade-pessoas" class="valor-dinheiro-pessoa input-pessoas" type="number" placeholder="0">
             </div>
         </section>
 
-        <section class="saida">
-            <div class="cartao">
-                <div class="resultGorjeta">
-                    <div class="legenda">Valor da gorjeta<br>/ pessoa</div>
-                    <div class="resultado">
+        <section class="calculadora-resultado">
+                <div class="container-gorjeta-pessoa">
+                    <div class="container-legenda">
+                        <div class="resultado-legenda">Valor gorjeta</div>
+                        <div class="resultado-legenda-secundario">/ pessoa</div>
+                    </div>
+                    <div class="calculo-resultado">
                         R$ 0,00
                     </div>
                 </div>
 
-                <div class="resultPessoa">
-                    <div class="legenda">Total<br>/ pessoa</div>
-                    <div class="resultado">
+                <div class="container-conta-pessoa">
+                    <div class="container-legenda">
+                        <div class="resultado-legenda">Total</div>
+                        <div class="resultado-legenda-secundario">/ pessoa</div>
+                    </div>
+                    <div class="calculo-resultado">
                         R$ 0,00
                     </div>
                 </div>
 
-                <div class="botao">
-                    <button class="limpar" id="">Limpar</button>
+                <div class="container-reset">
+                    <button type="button" class="botao-reset" id="">Calcular</button>
                 </div>
-            </div>
         </section>
 
     </div>
+
 <script src="main.js"></script>
 
 </body>
