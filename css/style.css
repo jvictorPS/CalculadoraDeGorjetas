@@ -156,28 +156,9 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .container-gorjeta-pessoa, .container-conta-pessoa {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
     justify-content: center;
     align-items: end;
-}
-
-.container-reset {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.botao-reset {
-    width: 80%;
-    height: 25%;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 10%;
-    font-family: 'Space Mono', monospace;
-    font-size: 100%;
-    font-weight: 700;
-    background-color: var(--fundo-geral);
-    color: var(--fundo-principal);
 }
 
 .calculo-resultado {
@@ -210,4 +191,35 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .resultado-legenda {
     color: white;
+}
+
+.container-reset {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.botao-calculo {
+    width: 80%;
+    height: 25%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10%;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--fundo-geral);
+    color: var(--fundo-principal);
+}
+
+.botao-calcular-ativado {
+    background-color: hsla(172, 67%, 45%, 0.600);
+}
+
+.botao-calcular-ativado:hover {
+    cursor: pointer;
+}
+
+.botao-calcular-ativado:active {
+    background-color: hsla(172, 67%, 45%, 0.800);
 }

@@ -16,7 +16,6 @@
 <body>
     
     <div class="calculadora">
-
         <section class="calculadora-informacoes">
 
             <div class="container-valor-conta">
@@ -32,7 +31,7 @@
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.15">15%</button>
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.25">25%</button>
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.50">50%</button>
-                    <input type="number" class="botao-gorjeta gorjeta-personalizada" placeholder="outro">
+                    <input id="input-percentual" type="number" class="botao-gorjeta gorjeta-personalizada" placeholder="outro">
                 </div>
             </div>
 
@@ -43,31 +42,26 @@
         </section>
 
         <section class="calculadora-resultado">
-                <div class="container-gorjeta-pessoa">
-                    <div class="container-legenda">
-                        <div class="resultado-legenda">Valor gorjeta</div>
-                        <div class="resultado-legenda-secundario">/ pessoa</div>
-                    </div>
-                    <div class="calculo-resultado">
-                        R$ 0,00
-                    </div>
+            <div class="container-gorjeta-pessoa">
+                <div class="container-legenda">
+                    <div class="resultado-legenda">Valor gorjeta</div>
+                    <div class="resultado-legenda-secundario">/ pessoa</div>
                 </div>
+                <div class="calculo-resultado">R$ 0,00</div>
+            </div>
 
-                <div class="container-conta-pessoa">
-                    <div class="container-legenda">
-                        <div class="resultado-legenda">Total</div>
-                        <div class="resultado-legenda-secundario">/ pessoa</div>
-                    </div>
-                    <div class="calculo-resultado">
-                        R$ 0,00
-                    </div>
+            <div class="container-conta-pessoa">
+                <div class="container-legenda">
+                    <div class="resultado-legenda">Total</div>
+                    <div class="resultado-legenda-secundario">/ pessoa</div>
                 </div>
+                <div class="calculo-resultado">R$ 0,00</div>
+            </div>
 
-                <div class="container-reset">
-                    <button type="button" class="botao-reset" id="">Calcular</button>
-                </div>
+            <div class="container-reset">
+                <button type="button" class="botao-calculo" id="botao-calcular" disabled>CALCULAR</button>
+            </div>
         </section>
-
     </div>
 
 <script src="main.js"></script>
