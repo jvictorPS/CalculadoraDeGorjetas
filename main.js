@@ -5,6 +5,8 @@ const percentualGorjetaFixa = document.querySelectorAll('#botao-percentual')
 const gorjetaPersonalizada = document.querySelector('#input-percentual')
 const resultadoTotalPessoa = document.getElementById('resultado-total-pessoa')
 const resultadoGorjetaPessoa = document.getElementById('resultado-gorjeta-pessoa')
+const spanErroValorZerado = document.getElementById('erro-maior-zero')
+const botaoLimpar = document.getElementById('botao-limpar')
 
 
 function verificaInputVazio() {
@@ -20,7 +22,7 @@ function verificaInputVazio() {
 inputPessoas.addEventListener('input' , verificaInputVazio)
 inputValorConta.addEventListener('input' , verificaInputVazio)
 
-let percentualDaGorjeta
+let percentualDaGorjeta = 0
 
 function verificaPercentualGorjetaPersonalizada() {
     percentualDaGorjeta = Number ((gorjetaPersonalizada.value) / 100)
@@ -41,7 +43,23 @@ percentualGorjetaFixa.forEach( (elemento) => {
     })
 })
 
+function removeErroValorZerado() {
+    if (Number(inputPessoas.value) === 0) {
+        spanErroValorZerado.style.visibility = 'hidden'
+        inputPessoas.classList.remove('input-pessoas-com-erro')
+    }
+}
+
+inputPessoas.addEventListener('input' , removeErroValorZerado)
+
 function calcular() {
+
+    if (Number(inputPessoas.value) === 0) {
+        spanErroValorZerado.style.visibility = 'visible'
+        inputPessoas.classList.add('input-pessoas-com-erro')
+        return
+    }
+
     let quantidadePessoas = Number(inputPessoas.value)
     let valorDaConta = Number(inputValorConta.value)
 
@@ -49,8 +67,23 @@ function calcular() {
     let valorGorjetaPessoa = (valorDaConta * percentualDaGorjeta) / quantidadePessoas
     let valorTotalPorPessoa = (valorDaConta + valorGorjetaTotal) / quantidadePessoas
 
-    resultadoGorjetaPessoa.innerText = `R$ ${valorGorjetaPessoa.toFixed(2).replace("." , ",")}`
-    resultadoTotalPessoa.innerText = `R$ ${valorTotalPorPessoa.toFixed(2).replace("." , ",")}`
+    resultadoGorjetaPessoa.innerText = `R$ ${valorGorjetaPessoa.toFixed(2).replace(".", ",")}`
+    resultadoTotalPessoa.innerText = `R$ ${valorTotalPorPessoa.toFixed(2).replace(".", ",")}`
+
 }
 
 botaoCalcular.addEventListener('click' , calcular)
+
+function limpar() {
+    inputValorConta.value = ""
+    inputPessoas.value = ""
+    gorjetaPersonalizada.value = ""
+    percentualDaGorjeta = 0
+    resultadoGorjetaPessoa.innerText = 'R$ 0,00'
+    resultadoTotalPessoa.innerText = 'R$ 0,00'
+
+    verificaInputVazio()
+    removeErroValorZerado()
+}
+
+botaoLimpar.addEventListener('click' , limpar)

@@ -31,13 +31,14 @@
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.15">15%</button>
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.25">25%</button>
                     <button id="botao-percentual" class="botao-gorjeta-fixa" type="button" value="0.50">50%</button>
-                    <input id="input-percentual" type="number" class="botao-gorjeta gorjeta-personalizada" placeholder="outro">
+                    <input id="input-percentual" type="number" class="botao-gorjeta gorjeta-personalizada" placeholder="outro" maxlength="3">
                 </div>
             </div>
 
             <div class="container-quantidade-pessoas">
                 <label for="" class="titulo-informacoes">Numero de pessoas</label>
                 <input id="quantidade-pessoas" class="valor-dinheiro-pessoa input-pessoas" type="number" placeholder="0">
+                <span id="erro-maior-zero" class="maior-que-zero">Não pode ser zero</span>
             </div>
         </section>
 
@@ -60,6 +61,7 @@
 
             <div class="container-reset">
                 <button type="button" class="botao-calculo" id="botao-calcular" disabled>CALCULAR</button>
+                <button type="button" class="limpar" id="botao-limpar"><img class="imagem-lixeira" src="images/delete.png" alt="deletar"></button>
             </div>
         </section>
     </div>

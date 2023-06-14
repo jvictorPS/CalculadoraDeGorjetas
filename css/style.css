@@ -94,6 +94,7 @@ body{
     text-align: center;
     color: var(--fundo-principal);
     text-align: right;
+    padding-right: 5%;
 }
 
 .gorjeta-personalizada::placeholder {
@@ -195,12 +196,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .container-reset {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: end;
 }
 
-.botao-calculo {
-    width: 80%;
+.botao-calculo, .limpar {
+    width: 70%;
     height: 25%;
     border-radius: 8px;
     border: none;
@@ -210,6 +211,23 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 700;
     background-color: var(--fundo-geral);
     color: var(--fundo-principal);
+}
+
+.limpar {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.limpar:active {
+    background-color: hsla(172, 67%, 45%, 0.800);
+}
+
+.imagem-lixeira {
+    height: 50%;
+    width: 50%;
 }
 
 .botao-calcular-ativado {
@@ -222,4 +240,17 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .botao-calcular-ativado:active {
     background-color: hsla(172, 67%, 45%, 0.800);
+}
+
+.maior-que-zero {
+    visibility: hidden;
+    color: rgb(215, 0, 0);
+    font-weight: 700;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 18px;
+}
+
+.input-pessoas-com-erro , .input-pessoas-com-erro:focus {
+    outline: 2px solid rgb(215, 0, 0)
 }
