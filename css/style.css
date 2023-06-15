@@ -1,3 +1,4 @@
+
 html, body {
     height: 100%;
     background-color: var(--fundo-geral);
@@ -24,29 +25,30 @@ body{
 .calculadora {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 60%;
-    width: 50%;
+    height: 600px;
+    width: 900px;
     align-items: center;
+    justify-content: center;
     background-color: var(--branco);
-    padding: 0 2%;
+    padding: 0 30px;
     border-radius: 30px;
 }
 
 .calculadora-informacoes {
-    padding: 5%;
+    padding: 15px;
 }
 
 .calculadora-informacoes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90%;
+    height: 580px;
 }
 
 .container-valor-conta, .container-quantidade-pessoas, .container-percentual-gorjeta {
     display: flex;
     flex-direction: column;
-    height: 33%;
+    height: 185px;
     justify-content: center;
 }
 
@@ -55,7 +57,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
-    height: 100%;
+    height: 185px;
 }
 
 .botao-gorjeta {
@@ -104,7 +106,7 @@ body{
 .valor-dinheiro-pessoa {
     border: none;
     background-color: var(--fundo-inputs);
-    height: 30%;
+    height: 55px;
     border-radius: 5px;
     font-family: 'Space Mono', monospace;
     font-size: 24px;
@@ -141,14 +143,14 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--letras);
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 3%;
+    margin-bottom: 15px;
 }
 
 
 .calculadora-resultado {
     background-color: var(--fundo-principal);
-    margin: 5%;
-    height: 85%;
+    margin: 20px;
+    height: 530px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr;
@@ -165,7 +167,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .calculo-resultado {
     color: var(--click);
     text-align: end;
-    margin-right: 15%;
+    margin-right: 20px;
     font-size: 40px;
     font-weight: 700;
 }
@@ -178,13 +180,13 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .resultado-legenda {
     font-size: 20px;
-    margin-left: 15%;
+    margin-left: 20px;
 }
 
 .resultado-legenda-secundario {
     font-size: 15px;
-    margin-left: 15%;
-    margin-top: 5%;
+    margin-left: 20px;
+    margin-top: 10px;
     color: var(--letras);
     font-weight: 700;
 }
@@ -201,11 +203,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .botao-calculo, .limpar {
-    width: 70%;
-    height: 25%;
+    width: 290px;
+    height: 60px;
     border-radius: 8px;
     border: none;
-    margin-bottom: 10%;
+    margin-bottom: 35px;
     font-family: 'Space Mono', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -213,12 +215,17 @@ input[type="number"]::-webkit-outer-spin-button {
     color: var(--fundo-principal);
 }
 
+.botao-calculo {
+    margin-left: 10px;
+}
+
 .limpar {
-    width: 15%;
+    width: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 .limpar:active {
@@ -254,3 +261,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-pessoas-com-erro , .input-pessoas-com-erro:focus {
     outline: 2px solid rgb(215, 0, 0)
 }
+
+
+
