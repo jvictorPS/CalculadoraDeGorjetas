@@ -10,7 +10,7 @@ const botaoLimpar = document.getElementById('botao-limpar')
 
 
 function verificaInputVazio() {
-    if(inputPessoas.value !== "" && inputValorConta.value !== "") {
+    if(inputPessoas.value !== "" && inputValorConta.value !== "" && verificaValorZerado()) {
         botaoCalcular.disabled = false
         botaoCalcular.classList.add('botao-calcular-ativado')
     } else {
@@ -43,14 +43,19 @@ percentualGorjetaFixa.forEach( (elemento) => {
     })
 })
 
-function removeErroValorZerado() {
-    if (Number(inputPessoas.value) === 0) {
+function verificaValorZerado() {
+    if (String(inputPessoas.value) === "0") {
+        spanErroValorZerado.style.visibility = 'visible'
+        inputPessoas.classList.add('input-pessoas-com-erro')
+        return false
+    } else {
         spanErroValorZerado.style.visibility = 'hidden'
         inputPessoas.classList.remove('input-pessoas-com-erro')
+        return true
     }
 }
 
-inputPessoas.addEventListener('input' , removeErroValorZerado)
+inputPessoas.addEventListener('input' , verificaValorZerado)
 
 function calcular() {
 
@@ -83,7 +88,7 @@ function limpar() {
     resultadoTotalPessoa.innerText = 'R$ 0,00'
 
     verificaInputVazio()
-    removeErroValorZerado()
+    verificaValorZerado()
 }
 
 botaoLimpar.addEventListener('click' , limpar)
