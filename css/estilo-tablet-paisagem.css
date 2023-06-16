@@ -1,28 +1,29 @@
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
     
     .calculadora {
         height: 400px;
-        width: 500px;
+        width: 700px;
         padding: 0 15px;
     }
 
     .calculadora-informacoes {
         height: 350px;
-        width: 220px;
+        width: 320px;
     }
 
     .calculadora-resultado {
         margin: 20px;
         height: 350px;
-        width: 220px;
+        width: 320px;
     }
     
-    .container-valor-conta, .container-quantidade-pessoas {
-        height: 100px;
+    .container-valor-conta, .container-quantidade-pessoas, .container-percentual-gorjeta {
+        height: 130px;
     }
 
     .container-opcoes-percentual {
-        gap: 12px;
+        gap: 15px;
+        height: 100px;
     }
 
     .botao-gorjeta {
@@ -36,8 +37,9 @@
     }
 
     .gorjeta-personalizada {
-        font-size: 15px;
-        font-weight: 00;
+        font-size: 18px;
+        font-weight: 700;
+        padding-right: 5%;
     }
 
     .valor-dinheiro-pessoa {
@@ -55,38 +57,38 @@
 
     .calculo-resultado {
         margin-right: 20px;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .resultado-legenda {
-        font-size: 10px;
-        margin-left: 12px;
+        font-size: 16px;
+        margin-left: 15px;
     }
 
     .resultado-legenda-secundario {
-        font-size: 10px;
-        margin-left: 12px;
-        margin-top: 5px;
+        font-size: 15px;
+        margin-left: 15px;
+        margin-top: 10px;
     }
 
     .botao-calculo, .limpar {
-        width: 160px;
-        height: 30px;
+        width: 230px;
+        height: 45px;
         margin-bottom: 30px;
         font-size: 18px;
     }
 
     .limpar {
-        width: 30px;
-        margin-right: 5px;
+        width: 45px;
+        margin-right: 8px;
     }
 
     .botao-calculo {
-        margin-left: 5px;
+        margin-left: 8px;
     }
 
     .imagem-lixeira {
-        height: 50%;
-        width: 80%;
+        height: 60%;
+        width: 70%;
     }
 }

@@ -1,33 +1,46 @@
-@media screen and (max-width: 750px) {
-    
+@media screen and (max-width: 380px) {
+
     .calculadora {
-        height: 400px;
-        width: 500px;
-        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0;
     }
 
     .calculadora-informacoes {
-        height: 350px;
-        width: 220px;
+        height: 400px;
+        width: 320px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 10px;
+        align-items: center;
     }
 
     .calculadora-resultado {
-        margin: 20px;
-        height: 350px;
-        width: 220px;
+        margin: 0;
+        height: 230px;
+        width: 340px;
+        margin-bottom: 10px;
     }
-    
+
     .container-valor-conta, .container-quantidade-pessoas {
         height: 100px;
     }
 
     .container-opcoes-percentual {
-        gap: 12px;
+        gap: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 250px;
     }
 
     .botao-gorjeta {
         width: 100%;
-        height: 100%;
+        height: 40px;
         padding: 0;
     }
 
@@ -55,29 +68,29 @@
 
     .calculo-resultado {
         margin-right: 20px;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .resultado-legenda {
-        font-size: 10px;
+        font-size: 12px;
         margin-left: 12px;
     }
 
     .resultado-legenda-secundario {
-        font-size: 10px;
+        font-size: 12px;
         margin-left: 12px;
         margin-top: 5px;
     }
 
     .botao-calculo, .limpar {
-        width: 160px;
-        height: 30px;
-        margin-bottom: 30px;
+        width: 220px;
+        height: 45px;
+        margin-bottom: 20px;
         font-size: 18px;
     }
 
     .limpar {
-        width: 30px;
+        width: 50px;
         margin-right: 5px;
     }
 
@@ -86,7 +99,7 @@
     }
 
     .imagem-lixeira {
-        height: 50%;
-        width: 80%;
+        height: 40%;
+        width: 50%;
     }
 }

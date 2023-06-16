@@ -1,4 +1,3 @@
-
 html, body {
     height: 100%;
     background-color: var(--fundo-geral);
@@ -35,14 +34,11 @@ body{
 }
 
 .calculadora-informacoes {
-    padding: 15px;
-}
-
-.calculadora-informacoes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 580px;
+    padding: 15px;
 }
 
 .container-valor-conta, .container-quantidade-pessoas, .container-percentual-gorjeta {
@@ -261,6 +257,3 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-pessoas-com-erro , .input-pessoas-com-erro:focus {
     outline: 2px solid rgb(215, 0, 0)
 }
-
-
-
