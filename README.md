@@ -1,2 +1,2 @@
-Calculadora de Gorjetas Responsiva
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+<h1>Calculadora de Gorjetas Responsiva</h1>
+![Design preview for the Tip calculator app coding challenge](./design/Apresentacao.jpg)
